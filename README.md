@@ -34,7 +34,7 @@ Créer le repository local avec des données en mémoire
 
 <details>
   <summary>Solution</summary>
-  https://github.com/Zenika/grenoble-hands-on-front-angular-mocks-backend/compare/master...step-2
+  https://github.com/Zenika/grenoble-hands-on-front-angular-mocks-backend/compare/step-1...step-2
 </details>
 
 ### Step 3 : Infrastructure - Display in table
@@ -43,7 +43,7 @@ Afficher les données dans un tableau
 
 <details>
   <summary>Solution</summary>
-  https://github.com/Zenika/grenoble-hands-on-front-angular-mocks-backend/compare/master...step-3
+  https://github.com/Zenika/grenoble-hands-on-front-angular-mocks-backend/compare/step-2...step-3
 </details>
 
 ### Step 4 : Mocks server
@@ -52,7 +52,7 @@ Créer le serveur de mock HTTP
 
 <details>
   <summary>Solution</summary>
-  https://github.com/Zenika/grenoble-hands-on-front-angular-mocks-backend/compare/master...step-4
+  https://github.com/Zenika/grenoble-hands-on-front-angular-mocks-backend/compare/step-3...step-4
 </details>
 
 ### Step 5 : Adapters - Repository HTTP
@@ -61,7 +61,7 @@ Créer le repository HTTP
 
 <details>
   <summary>Solution</summary>
-  https://github.com/Zenika/grenoble-hands-on-front-angular-mocks-backend/compare/master...step-5
+  https://github.com/Zenika/grenoble-hands-on-front-angular-mocks-backend/compare/step-4...step-5
 </details>
 
 ### Step 6 : Bonus - Génération contract testing
@@ -70,7 +70,7 @@ Créer le contrat de test Pact
 
 <details>
   <summary>Solution</summary>
-  https://github.com/Zenika/grenoble-hands-on-front-angular-mocks-backend/compare/master...step-6
+  https://github.com/Zenika/grenoble-hands-on-front-angular-mocks-backend/compare/step-5...step-6
 </details>
 
 
