@@ -1,0 +1,6 @@
+I, [2022-05-16T23:41:07.989824 #20314]  INFO -- : Registered expected interaction GET /categories.json
+I, [2022-05-16T23:41:08.825255 #20314]  INFO -- : Received request GET /categories.json
+I, [2022-05-16T23:41:08.825661 #20314]  INFO -- : Found matching response for GET /categories.json
+I, [2022-05-16T23:41:08.847713 #20314]  INFO -- : Verifying - interactions matched
+I, [2022-05-16T23:41:08.853330 #20314]  INFO -- : Cleared interactions
+I, [2022-05-16T23:41:08.871177 #20314]  INFO -- : Writing pact for category-service to /Users/arthurdrevot/GitHub/Zenika/grenoble-hands-on-front-angular-mocks-backend/pacts/front-pact-category-service.json
