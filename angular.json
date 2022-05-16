@@ -106,12 +106,7 @@
         "e2e": {
           "builder": "@cypress/schematic:cypress",
           "options": {
-            "devServerTarget": "grenoble-hands-on-front-angular-mocks-backend:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "grenoble-hands-on-front-angular-mocks-backend:serve:production"
-            }
+            "devServerTarget": "grenoble-hands-on-front-angular-mocks-backend:serve:production"
           }
         },
         "lint": {

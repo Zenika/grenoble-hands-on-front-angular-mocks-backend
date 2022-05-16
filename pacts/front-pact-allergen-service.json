@@ -1,0 +1,56 @@
+{
+  "consumer": {
+    "name": "front-pact"
+  },
+  "provider": {
+    "name": "allergen-service"
+  },
+  "interactions": [
+    {
+      "description": "a request to get all allergens",
+      "providerState": "allergens",
+      "request": {
+        "method": "GET",
+        "path": "/allergens.json"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "body": {
+          "count": 2,
+          "tags": [
+            {
+              "id": "en:milk",
+              "known": 1,
+              "name": "Lait",
+              "products": 203069,
+              "url": "https://world.openfoodfacts.org/allergen/milk"
+            },
+            {
+              "id": "en:gluten",
+              "known": 1,
+              "name": "Gluten",
+              "products": 174565,
+              "sameAs": [
+                "https://www.wikidata.org/wiki/Q188251"
+              ],
+              "url": "https://world.openfoodfacts.org/allergen/gluten"
+            }
+          ]
+        },
+        "matchingRules": {
+          "$.body": {
+            "match": "type"
+          }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
