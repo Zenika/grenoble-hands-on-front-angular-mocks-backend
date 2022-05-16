@@ -11,6 +11,7 @@ import { CategoryInMemoryRepository } from '@adapters/category/in-memory/categor
 import { AllergenRepository } from '@domain/allergen/ports/allergen.repository';
 import { AllergenInMemoryRepository } from '@adapters/allergen/in-memory/allergen.in-memory.repository';
 import { RetrieveAllergensUseCase } from '@domain/allergen/usecases/retrieve-allergens/retrieve-allergens.usecase';
+import { AllergenApiRepository } from '@adapters/allergen/api/allergen.api.repository';
 
 export const IHttpClient = new InjectionToken<HttpClient>('HttpClient');
 export const ICategoryRepository = new InjectionToken<CategoryRepository>('CategoryRepository');
@@ -50,8 +51,16 @@ export const IAllergenRepository = new InjectionToken<AllergenRepository>('Aller
     },
     {
       provide: IAllergenRepository,
-      useFactory: () => {
-        return new AllergenInMemoryRepository();
+      deps: [IHttpClient],
+      useFactory: (httpClient: HttpClient) => {
+        switch (environment.allergenRepositoryConfig) {
+          case RepositoriesConfiguration.HTTP:
+            return new AllergenApiRepository(httpClient);
+          case RepositoriesConfiguration.LOCAL:
+            return new AllergenInMemoryRepository();
+          default:
+            throw new Error(`Unknown value for the repository configuration "${environment.categoryRepositoryConfig}"`);
+        }
       }
     },
     {

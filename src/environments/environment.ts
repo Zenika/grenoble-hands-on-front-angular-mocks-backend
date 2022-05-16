@@ -7,7 +7,8 @@ import { RepositoriesConfiguration } from '@env/repositories-configuration';
 export const environment = {
   production: false,
   serverUrl: '',
-  categoryRepositoryConfig: RepositoriesConfiguration.HTTP
+  categoryRepositoryConfig: RepositoriesConfiguration.HTTP,
+  allergenRepositoryConfig: RepositoriesConfiguration.HTTP
 };
 
 /*
