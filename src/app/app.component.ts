@@ -14,10 +14,6 @@ export class AppComponent {
   ) {
   }
 
-  goToProduct(): void {
-    void this.router.navigate(['product']);
-  }
-
   goToCategory(): void {
     void this.router.navigate(['category']);
   }
