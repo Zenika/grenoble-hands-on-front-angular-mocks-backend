@@ -1,6 +1,6 @@
 [
   {
     "id": "base",
-    "routesVariants": ["get-categories:success"]
+    "routesVariants": ["get-categories:success", "get-allergens:success"]
   }
 ]
