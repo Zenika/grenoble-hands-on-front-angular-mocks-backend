@@ -8,9 +8,14 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class NavbarComponent {
 
   @Output() categoryClicked = new EventEmitter<void>();
+  @Output() allergenClicked = new EventEmitter<void>();
 
   goToCategory(): void {
     this.categoryClicked.emit();
+  }
+
+  gotToAllergen(): void {
+    this.allergenClicked.emit();
   }
 
 }

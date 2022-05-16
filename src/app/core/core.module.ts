@@ -8,9 +8,13 @@ import { CategoryApiRepository } from '@adapters/category/api/category.api.repos
 import { environment } from '@env/environment';
 import { RepositoriesConfiguration } from '@env/repositories-configuration';
 import { CategoryInMemoryRepository } from '@adapters/category/in-memory/category.in-memory.repository';
+import { AllergenRepository } from '@domain/allergen/ports/allergen.repository';
+import { AllergenInMemoryRepository } from '@adapters/allergen/in-memory/allergen.in-memory.repository';
+import { RetrieveAllergensUseCase } from '@domain/allergen/usecases/retrieve-allergens/retrieve-allergens.usecase';
 
 export const IHttpClient = new InjectionToken<HttpClient>('HttpClient');
 export const ICategoryRepository = new InjectionToken<CategoryRepository>('CategoryRepository');
+export const IAllergenRepository = new InjectionToken<AllergenRepository>('AllergenRepository');
 
 @NgModule({
   providers: [
@@ -44,6 +48,19 @@ export const ICategoryRepository = new InjectionToken<CategoryRepository>('Categ
         return new RetrieveCategoriesUseCase(categoryRepository)
       }
     },
+    {
+      provide: IAllergenRepository,
+      useFactory: () => {
+        return new AllergenInMemoryRepository();
+      }
+    },
+    {
+      provide: RetrieveAllergensUseCase,
+      deps: [IAllergenRepository],
+      useFactory: (allergenRepository: AllergenRepository) => {
+        return new RetrieveAllergensUseCase(allergenRepository);
+      }
+    }
   ]
 })
 export class CoreModule {

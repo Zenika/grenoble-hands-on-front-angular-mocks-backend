@@ -6,6 +6,10 @@ const routes: Routes = [
     path: 'category',
     loadChildren: () => import('./views/category/category.module').then(m => m.CategoryModule)
   },
+  {
+    path: 'allergen',
+    loadChildren: () => import('./views/allergen/allergen.module').then(m => m.AllergenModule)
+  },
   { path: '', redirectTo: 'category', pathMatch: 'full' }
 ];
 

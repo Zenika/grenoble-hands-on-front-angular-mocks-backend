@@ -17,4 +17,8 @@ export class AppComponent {
   goToCategory(): void {
     void this.router.navigate(['category']);
   }
+
+  goToAllergen(): void {
+    void this.router.navigate(['allergen']);
+  }
 }
